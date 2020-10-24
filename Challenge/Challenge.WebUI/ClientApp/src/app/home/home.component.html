@@ -1,3 +1,10 @@
 <h1>Hello, world!</h1>
 <p>Welcome to Pandora challenge SPA, write something in the textbox and click the send button:</p>
 
+<form class="form-inline">
+    <div class="form-group">
+        <label class="mx-1">Input Text</label>
+        <input type="text" class="form-control mx-1" [(ngModel)]="inputText" [ngModelOptions]="{standalone: true}">
+    </div>
+    <button (click)="send()" type="button" class="btn btn-primary" [disabled]="inputText ? '' : 'disabled'">Send</button>
+</form>
