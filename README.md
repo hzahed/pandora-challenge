@@ -24,3 +24,5 @@ There are to setting inside appsettings.json:
 - Delimiter: Defines how text items are sepearated from each other. Default value is new line but can be changed to tab or comma separated as well.
 
 I just spent around 4 hours for the development so didn't have more time to write more unit tests.
+
+Docker compose support is also enabled for both projects.
