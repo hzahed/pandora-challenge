@@ -28,6 +28,7 @@ namespace Challenge.WebApi.Services
                 await Task.Delay(500, stoppingToken);
 
                 var item = _queue.Dequeue();
+                if(string.IsNullOrWhiteSpace(item)) continue;
 
                 using var scope = _scopeFactory.CreateScope();
                 var writerService = scope.ServiceProvider.GetRequiredService<IWriterService>();
