@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  challenge.webapi:
+    image: ${DOCKER_REGISTRY-}challengewebapi
+    build:
+      context: .
+      dockerfile: Challenge.WebApi/Dockerfile
+
+  challenge.webui:
+    image: ${DOCKER_REGISTRY-}challengewebui
+    build:
+      context: .
+      dockerfile: Challenge.WebUI/Dockerfile
+

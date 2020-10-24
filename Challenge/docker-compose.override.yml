@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  challenge.webapi:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "80"
+
+  challenge.webui:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "80"
+

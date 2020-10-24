@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Challenge.WebApi", "Challen
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Challenge.WebUI", "Challenge.WebUI\Challenge.WebUI.csproj", "{6F8B2EB3-C63E-41B1-8B03-FA131AE02D9D}"
 EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{B53B35F6-86F2-460E-B982-B8EDE482B2AD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{6F8B2EB3-C63E-41B1-8B03-FA131AE02D9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6F8B2EB3-C63E-41B1-8B03-FA131AE02D9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6F8B2EB3-C63E-41B1-8B03-FA131AE02D9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B53B35F6-86F2-460E-B982-B8EDE482B2AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B53B35F6-86F2-460E-B982-B8EDE482B2AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B53B35F6-86F2-460E-B982-B8EDE482B2AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B53B35F6-86F2-460E-B982-B8EDE482B2AD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
