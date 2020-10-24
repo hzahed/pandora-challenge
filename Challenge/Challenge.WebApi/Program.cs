@@ -22,7 +22,7 @@ namespace Challenge.WebApi
                     webBuilder.UseStartup<Startup>()
                         .ConfigureServices(services =>
                         {
-                            services.AddHostedService<BackgroundWorker>();
+                            services.AddHostedService<BackgroundWorkerService>();
                         });
                 });
     }

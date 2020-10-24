@@ -24,6 +24,8 @@ namespace Challenge.WebApi
 
             services.AddSingleton<IBackgroundQueue<string>, BackgroundQueue<string>>();
             services.AddTransient<IWriterService, WriterService>();
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -33,6 +35,11 @@ namespace Challenge.WebApi
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseCors(x => x
+                .AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader());
 
             app.UseRouting();
 
