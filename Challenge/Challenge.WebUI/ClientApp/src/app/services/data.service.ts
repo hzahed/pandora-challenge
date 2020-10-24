@@ -7,6 +7,8 @@ export class DataService {
   constructor(private httpClient: HttpClient) {}
 
   post(url: string, dto: any) {
-    return this.httpClient.post(`${environment.apiRoot}/${url}`, dto);
+    const body = JSON.stringify(dto);
+    const link = `${environment.apiRoot}/${url}`;
+    return this.httpClient.post(link, dto);
   }
 }

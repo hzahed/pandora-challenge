@@ -12,7 +12,8 @@ export class HomeComponent {
   }
 
   send() {
-    this.dataService.post('tasks', {text: this.inputText}).subscribe(
+    let dto = {inputText: this.inputText};
+    this.dataService.post('tasks', dto).subscribe(
       (result: any) => {
 
       },
