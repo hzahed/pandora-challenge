@@ -1,5 +1,7 @@
 using Challenge.WebApi.Interfaces;
 using Challenge.WebApi.Services;
+using ElmahCore;
+using ElmahCore.Mvc;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -50,6 +52,16 @@ namespace Challenge.WebApi
                 };
             });
 
+            // Add ElmahCore to save error logs 
+            services.AddElmah<XmlFileErrorLog>(options =>
+            {
+                options.LogPath = "~/errorLogs";
+            });
+            services.Configure<IISServerOptions>(options =>
+            {
+                options.AllowSynchronousIO = true;
+            });
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -64,7 +76,9 @@ namespace Challenge.WebApi
             app.UseOpenApi(); // serve OpenAPI/Swagger documents
             app.UseSwaggerUi3(); // serve Swagger UI
 
-            
+            // Register Elmah
+            app.UseElmah();
+
             app.UseCors(x => x
                 .AllowAnyOrigin()
                 .AllowAnyMethod()

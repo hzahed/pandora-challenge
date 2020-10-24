@@ -9,6 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="ElmahCore" Version="1.2.5" />
     <PackageReference Include="NSwag.AspNetCore" Version="13.8.2" />
   </ItemGroup>
 
